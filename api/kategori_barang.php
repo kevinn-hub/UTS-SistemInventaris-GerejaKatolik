@@ -18,12 +18,21 @@ switch ($method) {
             }
 
             $stmt = mysqli_prepare($koneksi,
-                "SELECT * FROM kategori_barang WHERE id_kategori = ?"
+            "SELECT * FROM kategori_barang WHERE id_kategori = ?"
             );
 
-            mysqli_stmt_bind_param($stmt, "i", $id);
-            mysqli_stmt_execute($stmt);
-            $r = mysqli_stmt_get_result($stmt);
+        if (!$stmt) {
+            error_log(mysqli_error($koneksi));
+            sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+        }
+
+        mysqli_stmt_bind_param($stmt, "i", $id);
+
+        if (!mysqli_stmt_execute($stmt)) {
+            error_log(mysqli_stmt_error($stmt));
+            sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+        }
+        $r = mysqli_stmt_get_result($stmt);
 
             $data = mysqli_fetch_assoc($r);
 
@@ -38,14 +47,24 @@ switch ($method) {
             $search = "%" . $_GET['search'] . "%";
 
             $stmt = mysqli_prepare($koneksi,
-                "SELECT * FROM kategori_barang
-                 WHERE nama_kategori LIKE ? OR kode_kategori LIKE ?
-                 ORDER BY id_kategori DESC"
-            );
+            "SELECT * FROM kategori_barang
+            WHERE nama_kategori LIKE ? OR kode_kategori LIKE ?
+            ORDER BY id_kategori DESC"
+        );
 
-            mysqli_stmt_bind_param($stmt, "ss", $search, $search);
-            mysqli_stmt_execute($stmt);
-            $r = mysqli_stmt_get_result($stmt);
+        if (!$stmt) {
+            error_log(mysqli_error($koneksi));
+            sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+        }
+
+        mysqli_stmt_bind_param($stmt, "ss", $search, $search);
+
+        if (!mysqli_stmt_execute($stmt)) {
+            error_log(mysqli_stmt_error($stmt));
+            sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+        }
+
+        $r = mysqli_stmt_get_result($stmt);
 
             $data = [];
 
@@ -61,11 +80,25 @@ switch ($method) {
             $limit = max(1, (int) ($_GET['limit'] ?? 10));
             $offset = ($page - 1) * $limit;
 
-            $q = "SELECT * FROM kategori_barang
-                  ORDER BY id_kategori DESC
-                  LIMIT $limit OFFSET $offset";
+            $stmt = mysqli_prepare($koneksi,
+            "SELECT * FROM kategori_barang
+            ORDER BY id_kategori DESC
+            LIMIT ? OFFSET ?"
+            );
 
-            $r = mysqli_query($koneksi, $q);
+            if (!$stmt) {
+            error_log(mysqli_error($koneksi));
+            sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+        }
+
+            mysqli_stmt_bind_param($stmt, "ii", $limit, $offset);
+
+            if (!mysqli_stmt_execute($stmt)) {
+                error_log(mysqli_stmt_error($stmt));
+                sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+            }
+
+            $r = mysqli_stmt_get_result($stmt);
 
             $data = [];
 
@@ -76,8 +109,21 @@ switch ($method) {
             sendResponse(true, "berhasil", $data, 200);
         }
 
-        $q = "SELECT * FROM kategori_barang ORDER BY id_kategori DESC";
-        $r = mysqli_query($koneksi, $q);
+        $stmt = mysqli_prepare($koneksi,
+        "SELECT * FROM kategori_barang ORDER BY id_kategori DESC"
+        );
+
+        if (!$stmt) {
+            error_log(mysqli_error($koneksi));
+            sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+        }
+
+        if (!mysqli_stmt_execute($stmt)) {
+            error_log(mysqli_stmt_error($stmt));
+            sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+        }
+
+        $r = mysqli_stmt_get_result($stmt);
 
         $data = [];
 
@@ -109,11 +155,21 @@ switch ($method) {
         $tanggal = $input['tanggal_dibuat'];
 
         $stmt = mysqli_prepare($koneksi,
-            "SELECT id_kategori FROM kategori_barang WHERE kode_kategori = ?"
+        "SELECT id_kategori FROM kategori_barang WHERE kode_kategori = ?"
         );
 
+        if (!$stmt) {
+            error_log(mysqli_error($koneksi));
+            sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+        }
+
         mysqli_stmt_bind_param($stmt, "s", $kode);
-        mysqli_stmt_execute($stmt);
+
+        if (!mysqli_stmt_execute($stmt)) {
+            error_log(mysqli_stmt_error($stmt));
+            sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+        }
+
         $cek = mysqli_stmt_get_result($stmt);
 
         if (mysqli_num_rows($cek) > 0) {
@@ -121,20 +177,26 @@ switch ($method) {
         }
 
         $stmt = mysqli_prepare($koneksi,
-            "INSERT INTO kategori_barang
-             (nama_kategori, kode_kategori, deskripsi, tanggal_dibuat)
-             VALUES (?, ?, ?, ?)"
-        );
+        "INSERT INTO kategori_barang
+        (nama_kategori, kode_kategori, deskripsi, tanggal_dibuat)
+        VALUES (?, ?, ?, ?)"
+    );
 
-        mysqli_stmt_bind_param($stmt, "ssss",
-            $nama, $kode, $deskripsi, $tanggal
-        );
+    if (!$stmt) {
+        error_log(mysqli_error($koneksi));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+    }
+
+    mysqli_stmt_bind_param($stmt, "ssss",
+        $nama, $kode, $deskripsi, $tanggal
+    );
 
         if (mysqli_stmt_execute($stmt)) {
-            sendResponse(true, "Kategori berhasil ditambahkan",
-                ["id" => mysqli_insert_id($koneksi)], 201);
+        sendResponse(true, "Kategori berhasil ditambahkan",
+            ["id" => mysqli_insert_id($koneksi)], 201);
         } else {
-            sendResponse(false, "Gagal menambahkan kategori", null, 500);
+        error_log(mysqli_stmt_error($stmt));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
         }
 
         break;
@@ -159,11 +221,20 @@ switch ($method) {
         }
 
         $stmt = mysqli_prepare($koneksi,
-            "SELECT id_kategori FROM kategori_barang WHERE id_kategori = ?"
-        );
+        "SELECT id_kategori FROM kategori_barang WHERE id_kategori = ?"
+    );
 
-        mysqli_stmt_bind_param($stmt, "i", $id);
-        mysqli_stmt_execute($stmt);
+    if (!$stmt) {
+        error_log(mysqli_error($koneksi));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $id);
+
+    if (!mysqli_stmt_execute($stmt)) {
+        error_log(mysqli_stmt_error($stmt));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+    }
 
         if (mysqli_num_rows(mysqli_stmt_get_result($stmt)) == 0) {
             sendResponse(false, "Kategori tidak ditemukan", null, 404);
@@ -174,34 +245,53 @@ switch ($method) {
         $deskripsi = $input['deskripsi'];
         $tanggal = $input['tanggal_dibuat'];
 
-        $stmt = mysqli_prepare($koneksi,
-            "SELECT id_kategori FROM kategori_barang
-             WHERE kode_kategori = ? AND id_kategori != ?"
-        );
+       $stmt = mysqli_prepare($koneksi,
+        "SELECT id_kategori FROM kategori_barang
+        WHERE kode_kategori = ? AND id_kategori != ?"
+    );
 
-        mysqli_stmt_bind_param($stmt, "si", $kode, $id);
-        mysqli_stmt_execute($stmt);
+    if (!$stmt) {
+        error_log(mysqli_error($koneksi));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+    }
+
+    mysqli_stmt_bind_param($stmt, "si", $kode, $id);
+
+    if (!mysqli_stmt_execute($stmt)) {
+        error_log(mysqli_stmt_error($stmt));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+    }
 
         if (mysqli_num_rows(mysqli_stmt_get_result($stmt)) > 0) {
             sendResponse(false, "Kode kategori sudah digunakan", null, 409);
         }
 
         $stmt = mysqli_prepare($koneksi,
-            "UPDATE kategori_barang
-             SET nama_kategori = ?, kode_kategori = ?,
-                 deskripsi = ?, tanggal_dibuat = ?
-             WHERE id_kategori = ?"
-        );
+        "UPDATE kategori_barang
+        SET nama_kategori = ?, kode_kategori = ?,
+            deskripsi = ?, tanggal_dibuat = ?
+        WHERE id_kategori = ?"
+    );
 
-        mysqli_stmt_bind_param($stmt, "ssssi",
-            $nama, $kode, $deskripsi, $tanggal, $id
-        );
+    if (!$stmt) {
+        error_log(mysqli_error($koneksi));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+    }
+
+    mysqli_stmt_bind_param($stmt, "ssssi",
+        $nama, $kode, $deskripsi, $tanggal, $id
+    );
 
         if (mysqli_stmt_execute($stmt)) {
-            sendResponse(true, "Kategori berhasil diperbarui", ["id" => $id], 200);
-        } else {
-            sendResponse(false, "Gagal memperbarui kategori", null, 500);
+        if (mysqli_stmt_affected_rows($stmt) == 0) {
+            sendResponse(true, "Tidak ada perubahan data", ["id" => $id], 200);
         }
+
+        sendResponse(true, "Kategori berhasil diperbarui", ["id" => $id], 200);
+    } else {
+        error_log(mysqli_stmt_error($stmt));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+    }
 
         break;
 
@@ -214,22 +304,25 @@ switch ($method) {
         }
 
         $stmt = mysqli_prepare($koneksi,
-            "DELETE FROM kategori_barang WHERE id_kategori = ?"
-        );
+        "DELETE FROM kategori_barang WHERE id_kategori = ?"
+    );
 
-        mysqli_stmt_bind_param($stmt, "i", $id);
+    if (!$stmt) {
+        error_log(mysqli_error($koneksi));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $id);
 
         if (mysqli_stmt_execute($stmt)) {
             if (mysqli_stmt_affected_rows($stmt) == 0) {
                 sendResponse(false, "Kategori tidak ditemukan", null, 404);
             }
-
             sendResponse(true, "Kategori berhasil dihapus", ["id" => $id], 200);
         } else {
-            sendResponse(false,
-                "Kategori tidak dapat dihapus karena masih digunakan oleh barang",
-                null, 409);
-        }
+        error_log(mysqli_stmt_error($stmt));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+    }
 
         break;
 
