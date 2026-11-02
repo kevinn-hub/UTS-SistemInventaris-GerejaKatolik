@@ -1,4 +1,11 @@
 # SistemInventaris-GerejaKatolik
+Nama Kelompok : Anomali
+Anggota Kelompok :
+1.Leonard Kevin Fernando (2511500012)
+2.Rendy Orlando
+3.Peter Immanuel
+3.Melvyn
+
 Deskripsi
 Database gereja_katolik digunakan untuk menyimpan dan mengelola data inventaris barang gereja 
 
