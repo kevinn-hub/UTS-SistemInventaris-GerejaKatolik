@@ -3,7 +3,7 @@ Nama Kelompok : Anomali
 Anggota Kelompok :
 1.Leonard Kevin Fernando (2511500012)
 2.Rendy Orlando
-3.Peter Immanuel
+3.Peter Immanuell
 3.Melvyn
 
 Deskripsi
