@@ -56,7 +56,7 @@ Tugas:<br>
     <th>Response</th>
   </tr>
 
-<h2>2. Deskripsi Proyek</h2>
+<h2>Deskripsi Proyek</h2>
 
 <p>
   Sistem Inventaris Gereja Katolik merupakan aplikasi berbasis web yang dirancang untuk membantu pengelolaan dan pencatatan inventaris barang gereja.
