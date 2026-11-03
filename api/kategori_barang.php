@@ -148,7 +148,7 @@ switch ($method) {
         ) {
             sendResponse(false, "Semua field wajib diisi", null, 400);
         }
-
+       
         $nama = trim($input['nama_kategori']);
         $kode = trim($input['kode_kategori']);
         $deskripsi = $input['deskripsi'];
@@ -269,7 +269,7 @@ switch ($method) {
         $stmt = mysqli_prepare($koneksi,
         "UPDATE kategori_barang
         SET nama_kategori = ?, kode_kategori = ?,
-            deskripsi = ?, tanggal_dibuat = ?
+        deskripsi = ?, tanggal_dibuat = ?
         WHERE id_kategori = ?"
     );
 
