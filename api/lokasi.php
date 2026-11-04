@@ -180,8 +180,12 @@ switch ($method) {
         );
 
         if (!mysqli_stmt_execute($stmt)) {
-            error_log(mysqli_stmt_error($stmt));
-            sendResponse(false, "Terjadi kesalahan pada server", null, 500);
+        if (mysqli_stmt_errno($stmt) == 1062) {
+            sendResponse(false, "Kode lokasi sudah digunakan", null, 409);
+        }
+
+        error_log(mysqli_stmt_error($stmt));
+        sendResponse(false, "Terjadi kesalahan pada server", null, 500);
         }
 
         sendResponse(true, "Lokasi berhasil ditambahkan", [
