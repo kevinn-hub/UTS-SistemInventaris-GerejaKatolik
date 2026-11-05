@@ -59,13 +59,15 @@ Tugas:<br>
     <th>Response</th>
   </tr>
 
-  <!-- KATEGORI BARANG -->
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>GET</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php</td>
-    <td>-</td>
-    <td>{
+  
+<!-- KATEGORI BARANG -->
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>GET</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php</td>
+  <td>-</td>
+  <td><pre>{
   "status": true,
   "message": "berhasil",
   "data": [
@@ -112,25 +114,27 @@ Tugas:<br>
       "tanggal_dibuat": "2026-11-02"
     }
   ]
-}</td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>GET</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=999</td>
-    <td>-</td>
-    <td>{
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>GET</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=999</td>
+  <td>-</td>
+  <td><pre>{
   "status": false,
   "message": "Kategori tidak ditemukan",
   "data": null
-}</td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>GET</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=1</td>
-    <td>-</td>
-    <td>{
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>GET</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=1</td>
+  <td>-</td>
+  <td><pre>{
   "status": true,
   "message": "berhasil",
   "data": {
@@ -140,14 +144,15 @@ Tugas:<br>
     "deskripsi": "Kategori elektronik yang telah diperbarui",
     "tanggal_dibuat": "2026-11-02"
   }
-}</td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>GET</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?search=Elektronik</td>
-    <td>-</td>
-    <td>{
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>GET</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?search=Elektronik</td>
+  <td>-</td>
+  <td><pre>{
   "status": true,
   "message": "berhasil",
   "data": [
@@ -166,14 +171,15 @@ Tugas:<br>
       "tanggal_dibuat": "2026-11-02"
     }
   ]
-}</td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>GET</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?page=1&limit=2</td>
-    <td>-</td>
-    <td>{
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>GET</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?page=1&amp;limit=2</td>
+  <td>-</td>
+  <td><pre>{
   "status": true,
   "message": "berhasil",
   "data": [
@@ -192,131 +198,137 @@ Tugas:<br>
       "tanggal_dibuat": "2026-11-01"
     }
   ]
-}</td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>POST</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>POST</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php</td>
+  <td><pre>{
   "nama_kategori": "Peralatan Misa",
   "kode_kategori": "KAT007",
   "deskripsi": "Peralatan gereja",
   "tanggal_dibuat": "2026-11-02"
 }</pre></td>
-    <td> { 
+  <td><pre>{
   "status": true,
   "message": "kategori berhasil ditambahkan",
   "data": {
     "id": 7
-  } 
-}
-</td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>POST</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php</td>
-    <td><pre>{
+  }
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>POST</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php</td>
+  <td><pre>{
   "nama_kategori": "Kategori Percobaan",
   "kode_kategori": "KAT010"
 }</pre></td>
-    <td> { 
+  <td><pre>{
   "status": false,
   "message": "semua field wajib diisi",
   "data": null
-  } 
-</td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>POST</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>POST</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php</td>
+  <td><pre>{
   "nama_kategori": "Peralatan Liturgi",
   "kode_kategori": "KAT001",
   "deskripsi": "Pengujian kode kategori duplikat",
   "tanggal_dibuat": "2026-11-02"
 }</pre></td>
-    <td>{ 
+  <td><pre>{
   "status": false,
   "message": "kode kategori sudah digunakan",
   "data": null
-  } </td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>PUT</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=6</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>PUT</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=6</td>
+  <td><pre>{
   "nama_kategori": "Peralatan Kebersihan Gereja",
   "kode_kategori": "KAT006",
   "deskripsi": "Peralatan untuk menjaga kebersihan gereja",
   "tanggal_dibuat": "2026-11-02"
 }</pre></td>
-    <td> { 
+  <td><pre>{
   "status": true,
   "message": "kategori berhasil di perbarui",
   "data": {
     "id": 6
-  } 
-}</td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>PUT</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=5</td>
-    <td><pre>{
+  }
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>PUT</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=5</td>
+  <td><pre>{
   "nama_kategori": "Kategori Percobaan",
   "kode_kategori": "KAT999"
 }</pre></td>
-    <td>{ 
+  <td><pre>{
   "status": false,
   "message": "semua field wajib diisi",
   "data": null
-  } </td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>PUT</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=9</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>PUT</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=9</td>
+  <td><pre>{
   "nama_kategori": "Kategori Percobaan",
   "kode_kategori": "KAT999",
   "deskripsi": "Pengujian kategori yang tidak ditemukan",
   "tanggal_dibuat": "2026-11-02"
 }</pre></td>
-    <td>{ 
+  <td><pre>{
   "status": false,
   "message": "kategori tidak ditemukan",
   "data": null
-  } </td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>DELETE</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=7</td>
-    <td>-</td>
-    <td> { 
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>DELETE</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=7</td>
+  <td>-</td>
+  <td><pre>{
   "status": true,
   "message": "kategori berhasil dihapus",
   "data": {
     "id": 7
-  } 
-}</td>
-  </tr>
-  <tr>
-    <td>kategori_barang.php</td>
-    <td>DELETE</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=999</td>
-    <td>-</td>
-    <td> { 
+  }
+}</pre></td>
+</tr>
+
+<tr>
+  <td>kategori_barang.php</td>
+  <td>DELETE</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=999</td>
+  <td>-</td>
+  <td><pre>{
   "status": false,
   "message": "kategori tidak  ditemukan",
   "data": null
-  } 
-</td>
-  </tr>
+}</pre></td>
+</tr>
+
 
   <!-- BARANG -->
   <tr>
