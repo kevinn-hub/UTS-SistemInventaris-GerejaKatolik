@@ -1,0 +1,1192 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "UTS Sistem Inventaris Gereja Katolik",
+    "collectionId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+    "dateExported": "2026-11-05T10:06:36.726Z",
+    "version": "1.4",
+    "folders": [
+        {
+            "_id": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "kategori_barang",
+            "containerId": "",
+            "created": "2026-11-02T05:33:23.327Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "barang",
+            "containerId": "",
+            "created": "2026-11-03T13:16:01.844Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "lokasi",
+            "containerId": "",
+            "created": "2026-11-04T02:23:11.722Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "d14abbdc-41fe-4f2d-93b5-876679e76ed1",
+            "name": "transaksi_barang",
+            "containerId": "",
+            "created": "2026-11-04T03:29:50.174Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d7bc5799-b90a-4800-bca2-7ee69707eda9",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "GET Semua kategori_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2026-11-02T05:34:28.650Z",
+            "modified": "2026-11-02T05:34:28.650Z",
+            "headers": []
+        },
+        {
+            "_id": "707fa12c-0850-4a3f-9f75-99bf5099bdc0",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "GET kategori_barang Tidak Ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=999",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2026-11-02T05:37:44.953Z",
+            "modified": "2026-11-02T05:37:44.953Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "999",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "fb2c5327-326c-4236-b07e-fcb8090a75fa",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "GET kategori_barang Berdasarkan ID",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=1",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2026-11-02T05:35:50.561Z",
+            "modified": "2026-11-02T05:35:50.561Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "9479ae67-171b-41ec-9533-88c92c8cfb07",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "GET Search kategori_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?search=Elektronik",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2026-11-02T05:38:26.784Z",
+            "modified": "2026-11-02T05:38:26.784Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "search",
+                    "value": "Elektronik",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "74d10daa-34fc-432f-b82e-94677b368de7",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "GET Pagination kategori_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?page=1&limit=2",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2026-11-02T05:38:59.957Z",
+            "modified": "2026-11-02T05:38:59.957Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "eb8f8ee9-1111-49a2-86e4-b191ba02fe1f",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "POST Tambah Kategori_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2026-11-02T05:39:59.507Z",
+            "modified": "2026-11-02T05:39:59.507Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"nama_kategori\": \"Peralatan Misa\",",
+                    "  \"kode_kategori\": \"KAT007\",",
+                    "  \"deskripsi\": \"Peralatan gereja\",",
+                    "  \"tanggal_dibuat\": \"2026-11-02\"",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "5940a220-d6c3-4420-a0cb-c82ac44252d4",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "POST Data Kategori_barang Tidak Lengkap",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php",
+            "method": "POST",
+            "sortNum": 135000,
+            "created": "2026-11-02T05:53:38.974Z",
+            "modified": "2026-11-02T05:53:38.974Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"nama_kategori\": \"Kategori Percobaan\",",
+                    "  \"kode_kategori\": \"KAT010\"",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "250c6627-4994-461a-9ebb-6eb1c69e4afa",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "\tPOST Kategori_barang Duplikat",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2026-11-02T05:44:21.838Z",
+            "modified": "2026-11-02T05:44:21.838Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"nama_kategori\": \"Peralatan Liturgi\",",
+                    "  \"kode_kategori\": \"KAT001\",",
+                    "  \"deskripsi\": \"Pengujian kode kategori duplikat\",",
+                    "  \"tanggal_dibuat\": \"2026-11-02\"",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "589d7377-bff1-44f8-984d-8588f39a94a2",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "PUT Update Kategori_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=6",
+            "method": "PUT",
+            "sortNum": 150000,
+            "created": "2026-11-02T05:47:02.779Z",
+            "modified": "2026-11-02T05:47:02.779Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "6",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"nama_kategori\": \"Peralatan Kebersihan Gereja\",",
+                    "  \"kode_kategori\": \"KAT006\",",
+                    "  \"deskripsi\": \"Peralatan untuk menjaga kebersihan gereja\",",
+                    "  \"tanggal_dibuat\": \"2026-11-02\"",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "9ad9454f-6a8e-4403-a3e0-779e3a28e769",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "PUT kategori_barang Tidak Lengkap",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=5",
+            "method": "PUT",
+            "sortNum": 155000,
+            "created": "2026-11-03T01:35:03.361Z",
+            "modified": "2026-11-03T01:35:03.361Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "5",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"nama_kategori\": \"Kategori Percobaan\",",
+                    "  \"kode_kategori\": \"KAT999\"",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "dfeb9026-e6ef-441e-967c-1ca6b2b93e98",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "PUT Kategori_barang Tidak Ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=9",
+            "method": "PUT",
+            "sortNum": 160000,
+            "created": "2026-11-02T05:49:27.852Z",
+            "modified": "2026-11-02T05:49:27.852Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "9",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"nama_kategori\": \"Kategori Percobaan\",",
+                    "  \"kode_kategori\": \"KAT999\",",
+                    "  \"deskripsi\": \"Pengujian kategori yang tidak ditemukan\",",
+                    "  \"tanggal_dibuat\": \"2026-11-02\"",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "b08e78d9-c5c4-4c31-b7fa-c852119cfc10",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "DELETE Hapus Kategori_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=7",
+            "method": "DELETE",
+            "sortNum": 170000,
+            "created": "2026-11-02T05:51:19.210Z",
+            "modified": "2026-11-02T05:51:19.210Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "7",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "f1e90e05-c0cc-422f-a5e8-0e007ae22776",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "b461f275-c2cd-4435-8696-3fcb72c31d00",
+            "name": "DELETE Kategori_barang Tidak Ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=999",
+            "method": "DELETE",
+            "sortNum": 180000,
+            "created": "2026-11-02T05:52:18.393Z",
+            "modified": "2026-11-02T05:52:18.393Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "999",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "b2321d3d-12d6-49e8-b7d8-3fc6f13f6b1f",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "GET Semua barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2026-11-03T23:44:33.939Z",
+            "modified": "2026-11-03T23:44:33.940Z",
+            "headers": []
+        },
+        {
+            "_id": "05aed0c0-672e-4958-8f71-81db785908a9",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "GET barang Tidak Ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=999",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2026-11-03T23:45:29.864Z",
+            "modified": "2026-11-03T23:45:29.865Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "999",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "18eb76da-260e-488a-bdfb-af38bb2ad254",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "GET barang Berdasarkan ID",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=2",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2026-11-03T23:46:12.477Z",
+            "modified": "2026-11-03T23:46:12.477Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "2",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "cc6db7ed-f84b-46ee-91b7-357a8ca0a637",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "GET Search barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?search=piala",
+            "method": "GET",
+            "sortNum": 215000,
+            "created": "2026-11-03T23:49:45.461Z",
+            "modified": "2026-11-03T23:49:45.461Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "search",
+                    "value": "piala",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "849a8ad6-8fe8-4c98-9f50-1d65d2563e29",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "GET Pagination barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?page=1&limit=2",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2026-11-03T23:48:55.469Z",
+            "modified": "2026-11-03T23:48:55.470Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "44063aa1-b61d-44aa-b855-6e9f1f871823",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "POST Tambah barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php",
+            "method": "POST",
+            "sortNum": 250000,
+            "created": "2026-11-03T23:54:30.032Z",
+            "modified": "2026-11-03T23:54:30.033Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"kode_barang\": \"BRG008\",\r",
+                    "  \"id_kategori\": 1,\r",
+                    "  \"id_lokasi\": 1,\r",
+                    "  \"nama_barang\": \"Mikrofon Gereja\",\r",
+                    "  \"jumlah\": 5,\r",
+                    "  \"kondisi\": \"Baik\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "9f6aad8c-959c-4d1e-ae9e-4c9bc32b99ce",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "POST Data barang Tidak Lengkap",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php",
+            "method": "POST",
+            "sortNum": 260000,
+            "created": "2026-11-04T00:02:28.383Z",
+            "modified": "2026-11-04T00:02:28.383Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"kode_barang\": \"BRG011\",\r",
+                    "  \"id_kategori\": 1,\r",
+                    "  \"id_lokasi\": 1,\r",
+                    "  \"jumlah\": 5,\r",
+                    "  \"kondisi\": \"Baik\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "799f297d-14bb-4e0f-bbe7-90fd35281de6",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "POST kategori tidak ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php",
+            "method": "POST",
+            "sortNum": 265000,
+            "created": "2026-11-04T00:07:57.682Z",
+            "modified": "2026-11-04T00:07:57.682Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"kode_barang\": \"BRG012\",\r",
+                    "  \"id_kategori\": 999,\r",
+                    "  \"id_lokasi\": 1,\r",
+                    "  \"nama_barang\": \"Mikrofon Gereja\",\r",
+                    "  \"jumlah\": 5,\r",
+                    "  \"kondisi\": \"Baik\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "a96e23e2-ad58-426a-81fc-ee564accf8cb",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "POST lokasi tidak ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php",
+            "method": "POST",
+            "sortNum": 267500,
+            "created": "2026-11-04T00:08:18.327Z",
+            "modified": "2026-11-04T00:08:18.327Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"kode_barang\": \"BRG013\",\r",
+                    "  \"id_kategori\": 1,\r",
+                    "  \"id_lokasi\": 999,\r",
+                    "  \"nama_barang\": \"Mikrofon Gereja\",\r",
+                    "  \"jumlah\": 5,\r",
+                    "  \"kondisi\": \"Baik\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "4f328901-9980-4ef2-bf17-fe327e2e0fd4",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "\tPOST barang Duplikat",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php",
+            "method": "POST",
+            "sortNum": 270000,
+            "created": "2026-11-04T00:03:17.352Z",
+            "modified": "2026-11-04T00:03:17.352Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"kode_barang\": \"BRG09\",\r",
+                    "  \"id_kategori\": 1,\r",
+                    "  \"id_lokasi\": 1,\r",
+                    "  \"nama_barang\": \"Speaker Gereja\",\r",
+                    "  \"jumlah\": 3,\r",
+                    "  \"kondisi\": \"Baik\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "3162a6a5-a334-4acb-8d79-ed8e78cb3252",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "PUT Update barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=9",
+            "method": "PUT",
+            "sortNum": 310000,
+            "created": "2026-11-04T00:25:14.878Z",
+            "modified": "2026-11-04T00:25:14.879Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "9",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"kode_barang\": \"BRG009\",\r",
+                    "  \"id_kategori\": 1,\r",
+                    "  \"id_lokasi\": 1,\r",
+                    "  \"nama_barang\": \"speaker Gereja Update\",\r",
+                    "  \"jumlah\": 10,\r",
+                    "  \"kondisi\": \"Baik\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "d3b35d4e-ab82-48f6-a41e-1106737baf6f",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "PUT barang Tidak Lengkap",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=9",
+            "method": "PUT",
+            "sortNum": 320000,
+            "created": "2026-11-04T00:26:03.807Z",
+            "modified": "2026-11-04T00:26:03.807Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "9",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "\"id_kategori\": 1,\r",
+                    "  \"id_lokasi\": 1,\r",
+                    "  \"nama_barang\": \"speaker Gereja Update\",\r",
+                    "  \"jumlah\": 10,\r",
+                    "  \"kondisi\": \"Baik\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "5f72982f-e3fa-46a7-bc36-d2b1c7cf51f9",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "PUT barang Tidak Ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=99",
+            "method": "PUT",
+            "sortNum": 330000,
+            "created": "2026-11-04T00:27:34.444Z",
+            "modified": "2026-11-04T00:27:34.444Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "99",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"kode_barang\": \"BRG009\",\r",
+                    "  \"id_kategori\": 1,\r",
+                    "  \"id_lokasi\": 1,\r",
+                    "  \"nama_barang\": \"speaker Gereja Update\",\r",
+                    "  \"jumlah\": 10,\r",
+                    "  \"kondisi\": \"Baik\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "6e185e61-9a70-44f7-a2fe-904b59c2d700",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "DELETE Hapus barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=9",
+            "method": "DELETE",
+            "sortNum": 340000,
+            "created": "2026-11-04T00:46:18.776Z",
+            "modified": "2026-11-04T00:46:18.777Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "9",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "823638c7-6a46-4152-b1f9-e587011ca88c",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "2b8f8867-2be9-41b4-add7-b62aca8737a2",
+            "name": "DELETE barang Tidak Ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=99",
+            "method": "DELETE",
+            "sortNum": 350000,
+            "created": "2026-11-04T00:46:38.206Z",
+            "modified": "2026-11-04T00:46:38.206Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "99",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "1dd3b168-0c6e-45a5-90bf-7ac19b2d42c5",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "GET Semua lokasi",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php",
+            "method": "GET",
+            "sortNum": 360000,
+            "created": "2026-11-04T02:25:22.136Z",
+            "modified": "2026-11-04T02:25:22.136Z",
+            "headers": []
+        },
+        {
+            "_id": "c00bf4b9-8933-4187-8990-f72436393a51",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "GET lokasi Tidak Ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=99",
+            "method": "GET",
+            "sortNum": 370000,
+            "created": "2026-11-04T02:25:50.653Z",
+            "modified": "2026-11-04T02:25:50.653Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "99",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "53e5269e-763a-47d4-a12a-efc20b383c0c",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "GET lokasi Berdasarkan ID",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=2",
+            "method": "GET",
+            "sortNum": 380000,
+            "created": "2026-11-04T02:26:16.835Z",
+            "modified": "2026-11-04T02:26:16.835Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "2",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "ca987a47-03fb-4340-94c8-4bcf734f25a4",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "GET Search lokasi",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?search=sak",
+            "method": "GET",
+            "sortNum": 390000,
+            "created": "2026-11-04T02:26:59.240Z",
+            "modified": "2026-11-04T02:26:59.240Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "search",
+                    "value": "sak",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "17024fbe-6ae0-42c8-9d19-1e95de8c22ac",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "GET Pagination lokasi",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?page=1&limit=2",
+            "method": "GET",
+            "sortNum": 400000,
+            "created": "2026-11-04T02:27:25.542Z",
+            "modified": "2026-11-04T02:27:25.542Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "b9027dfe-6d77-443a-9d69-8c4cd6af1bd8",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "POST Tambah Lokasi",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php",
+            "method": "POST",
+            "sortNum": 410000,
+            "created": "2026-11-04T02:27:51.376Z",
+            "modified": "2026-11-04T02:27:51.376Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "    \"nama_lokasi\": \"Aula Paroki\",",
+                    "    \"kode_lokasi\": \"LOK007\",",
+                    "    \"penanggung_jawab\": \"Petugas Liturgi\",",
+                    "    \"kapasitas\": 200",
+                    "    }"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "61b9e52b-a849-4184-926c-05253257e01c",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "POST Data lokasi Tidak Lengkap",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php",
+            "method": "POST",
+            "sortNum": 420000,
+            "created": "2026-11-04T02:28:25.441Z",
+            "modified": "2026-11-04T02:28:25.442Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "    \"nama_lokasi\": \"Aula Paroki\",",
+                    "    \"kode_lokasi\": \"LOK007\",",
+                    "    }"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "b859dccb-c4ea-43ef-bbf6-13c976caebef",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "\tPOST lokasi Duplikat",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php",
+            "method": "POST",
+            "sortNum": 440000,
+            "created": "2026-11-04T02:30:15.739Z",
+            "modified": "2026-11-04T02:30:15.739Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "    \"nama_lokasi\": \"Aula Paroki\",",
+                    "    \"kode_lokasi\": \"LOK007\",",
+                    "    \"penanggung_jawab\": \"Petugas Liturgi\",",
+                    "    \"kapasitas\": 200",
+                    "    }"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "e2fdb24b-e63c-42d6-b983-bf108091bf1a",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "PUT Update lokasi",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=7",
+            "method": "PUT",
+            "sortNum": 450000,
+            "created": "2026-11-04T02:30:44.957Z",
+            "modified": "2026-11-04T02:30:44.957Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "7",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "    \"nama_lokasi\": \"Aula 1\",",
+                    "    \"kode_lokasi\": \"LOK007\",",
+                    "    \"penanggung_jawab\": \"Petugas Liturgi\",",
+                    "    \"kapasitas\": 200",
+                    "    }"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "9b8f50c1-1f1a-4076-9376-65937acfb52b",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "PUT lokasi Tidak Lengkap",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=7",
+            "method": "PUT",
+            "sortNum": 460000,
+            "created": "2026-11-04T02:31:31.626Z",
+            "modified": "2026-11-04T02:31:31.626Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "7",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "    \"nama_lokasi\": \"Aula 1\",",
+                    "    \"kode_lokasi\": \"LOK007\"",
+                    "    }"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "0e1d323f-0026-461e-93eb-fec7adc82335",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "PUT lokasi Tidak Ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=777",
+            "method": "PUT",
+            "sortNum": 470000,
+            "created": "2026-11-04T03:12:29.658Z",
+            "modified": "2026-11-04T03:12:29.658Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "777",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "    \"nama_lokasi\": \"Aula Paroki\",",
+                    "    \"kode_lokasi\": \"LOK777\",",
+                    "    \"penanggung_jawab\": \"Petugas Liturgi\",",
+                    "    \"kapasitas\": 200",
+                    "    }"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "86823da2-8cf8-443b-bea7-a998a2e6afb3",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "DELETE Hapus lokasi",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=7",
+            "method": "DELETE",
+            "sortNum": 480000,
+            "created": "2026-11-04T03:13:04.255Z",
+            "modified": "2026-11-04T03:13:04.255Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "7",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "2cb3b925-243c-438f-a7a4-a2734ebc1f44",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "92a6096f-c124-40d8-b99d-6678bc6e050a",
+            "name": "DELETE lokasi Tidak Ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=77",
+            "method": "DELETE",
+            "sortNum": 490000,
+            "created": "2026-11-04T03:13:27.166Z",
+            "modified": "2026-11-04T03:13:27.166Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "77",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "b4904fc1-2ffb-42bc-9620-b2ff2943aea2",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "d14abbdc-41fe-4f2d-93b5-876679e76ed1",
+            "name": "GET Semua transaksi_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php",
+            "method": "GET",
+            "sortNum": 500000,
+            "created": "2026-11-04T03:34:59.150Z",
+            "modified": "2026-11-04T03:34:59.150Z",
+            "headers": []
+        },
+        {
+            "_id": "b1a8f03b-afd7-4582-9916-2acd815bc3f6",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "d14abbdc-41fe-4f2d-93b5-876679e76ed1",
+            "name": "GET transaksi_barang Tidak Ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php?id=999",
+            "method": "GET",
+            "sortNum": 510000,
+            "created": "2026-11-04T03:35:36.761Z",
+            "modified": "2026-11-04T03:35:36.762Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "999",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "7688d027-4420-4071-a12d-0ccb54a49f6d",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "d14abbdc-41fe-4f2d-93b5-876679e76ed1",
+            "name": "GET Pagination transaksi_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php?page=1&limit=2",
+            "method": "GET",
+            "sortNum": 540000,
+            "created": "2026-11-04T03:37:19.441Z",
+            "modified": "2026-11-04T03:37:19.441Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "d28ee2ae-5f92-404d-921e-9d8a8b5a72c5",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "d14abbdc-41fe-4f2d-93b5-876679e76ed1",
+            "name": "POST Tambah transaksi_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php",
+            "method": "POST",
+            "sortNum": 550000,
+            "created": "2026-11-04T03:37:38.953Z",
+            "modified": "2026-11-04T03:37:38.953Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "      \"id_barang\":7,\r",
+                    "      \"jenis_transaksi\": \"Masuk\",\r",
+                    "      \"jumlah\": 10,\r",
+                    "      \"tanggal\": \"2026-10-08\",\r",
+                    "      \"keterangan\": \"Pemindahan Meja\"\r",
+                    "    }"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "a7a08879-e0f1-47e6-8ff7-c461cc630ada",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "d14abbdc-41fe-4f2d-93b5-876679e76ed1",
+            "name": "POST Data transaksi_barang Tidak Lengkap",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php",
+            "method": "POST",
+            "sortNum": 570000,
+            "created": "2026-11-04T03:38:15.346Z",
+            "modified": "2026-11-04T03:38:15.346Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "      \"id_barang\":7,\r",
+                    "      \"jenis_transaksi\": \"Masuk\",\r",
+                    "      \"jumlah\": 10\r",
+                    "    }"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "e7c02857-eca1-495b-a817-b648f3efcbcf",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "d14abbdc-41fe-4f2d-93b5-876679e76ed1",
+            "name": "POST barang tidak ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php",
+            "method": "POST",
+            "sortNum": 590000,
+            "created": "2026-11-04T03:40:32.149Z",
+            "modified": "2026-11-04T03:40:32.149Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "    \"id_barang\": 9999,\r",
+                    "    \"jenis_transaksi\": \"Masuk\",\r",
+                    "    \"jumlah\": 10,\r",
+                    "    \"tanggal\": \"2026-10-08\",\r",
+                    "    \"keterangan\": \"Pengujian FK 404\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "09f1fe73-7420-4c11-80d4-503936063ab0",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "d14abbdc-41fe-4f2d-93b5-876679e76ed1",
+            "name": "PUT Update transaksi_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php?id=6",
+            "method": "PUT",
+            "sortNum": 600000,
+            "created": "2026-11-04T03:41:35.153Z",
+            "modified": "2026-11-04T03:41:35.153Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "6",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "      \"id_barang\":7,\r",
+                    "      \"jenis_transaksi\": \"Keluar\",\r",
+                    "      \"jumlah\": 10,\r",
+                    "      \"tanggal\": \"2026-10-08\",\r",
+                    "      \"keterangan\": \"Pemindahan Meja\"\r",
+                    "    }"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "2e861a13-e510-4e71-9150-dc00babc78f2",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "d14abbdc-41fe-4f2d-93b5-876679e76ed1",
+            "name": "PUT barang tidak ditemukan",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php?id=6",
+            "method": "PUT",
+            "sortNum": 640000,
+            "created": "2026-11-04T03:46:09.202Z",
+            "modified": "2026-11-04T03:46:09.202Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "6",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "      \"id_barang\":77,\r",
+                    "      \"jenis_transaksi\": \"Keluar\",\r",
+                    "      \"jumlah\": 10,\r",
+                    "      \"tanggal\": \"2026-10-08\",\r",
+                    "      \"keterangan\": \"Pemindahan Meja\"\r",
+                    "    }"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "d87ab25a-3805-4a9b-98d8-4d770a2e8e08",
+            "colId": "29cd8e3c-077a-402d-8515-161c6d623c5b",
+            "containerId": "d14abbdc-41fe-4f2d-93b5-876679e76ed1",
+            "name": "DELETE Hapus transaksi_barang",
+            "url": "http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php?id=6",
+            "method": "DELETE",
+            "sortNum": 650000,
+            "created": "2026-11-04T03:47:51.210Z",
+            "modified": "2026-11-04T03:47:51.211Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "6",
+                    "isPath": false
+                }
+            ]
+        }
+    ],
+    "ref": "8ZoRv5u_qxpJyAxWPzkvpDJtzygKxSjVPQM3YeVZzFK893kRKxJWMegdqS-NCPcWEZbVmDE4VQZoXhmrKLL15A"
+}
