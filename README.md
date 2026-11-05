@@ -331,13 +331,14 @@ Tugas:<br>
 </tr>
 
 
-  <!-- BARANG -->
-  <tr>
-    <td>barang.php</td>
-    <td>GET</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
-    <td>-</td>
-    <td>{
+  
+<!-- BARANG -->
+<tr>
+  <td>barang.php</td>
+  <td>GET</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
+  <td>-</td>
+  <td><pre>{
   "status": true,
   "message": "berhasil",
   "data": [
@@ -430,27 +431,25 @@ Tugas:<br>
       "nama_lokasi": "Sakristi"
     }
   ]
-}
-</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>GET</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=999</td>
-    <td>-</td>
-    <td>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>GET</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=999</td>
+  <td>-</td>
+  <td><pre>{
   "status": false,
   "message": "Barang tidak ditemukan",
   "data": null
-}
-</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>GET</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=2</td>
-    <td>-</td>
-    <td>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>GET</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=2</td>
+  <td>-</td>
+  <td><pre>{
   "status": true,
   "message": "berhasil",
   "data": {
@@ -464,15 +463,14 @@ Tugas:<br>
     "nama_kategori": "Peralatan Elektronik Update",
     "nama_lokasi": "Sakristi"
   }
-}
-</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>GET</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?search=piala</td>
-    <td>-</td>
-    <td>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>GET</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?search=piala</td>
+  <td>-</td>
+  <td><pre>{
   "status": true,
   "message": "berhasil",
   "data": [
@@ -488,15 +486,14 @@ Tugas:<br>
       "nama_lokasi": "Sakristi"
     }
   ]
-}
-</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>GET</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?page=1&limit=2</td>
-    <td>-</td>
-    <td>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>GET</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?page=1&amp;limit=2</td>
+  <td>-</td>
+  <td><pre>{
   "status": true,
   "message": "berhasil",
   "data": [
@@ -523,14 +520,13 @@ Tugas:<br>
       "nama_lokasi": "Gudang Serbaguna"
     }
   ]
-}
-</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>POST</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>POST</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
+  <td><pre>{
   "kode_barang": "BRG008",
   "id_kategori": 1,
   "id_lokasi": 1,
@@ -538,38 +534,36 @@ Tugas:<br>
   "jumlah": 5,
   "kondisi": "Baik"
 }</pre></td>
-    <td>{
+  <td><pre>{
   "status": true,
   "message": "barang berhasil ditambahkan",
   "data": {
     "id": 8
   }
-}
-</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>POST</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>POST</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
+  <td><pre>{
   "kode_barang": "BRG011",
   "id_kategori": 1,
   "id_lokasi": 1,
   "jumlah": 5,
   "kondisi": "Baik"
 }</pre></td>
-    <td>{
+  <td><pre>{
   "status": false,
   "message": "semua field wajib diisi",
   "data": null
-    }
-  </td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>POST</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>POST</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
+  <td><pre>{
   "kode_barang": "BRG012",
   "id_kategori": 999,
   "id_lokasi": 1,
@@ -577,17 +571,17 @@ Tugas:<br>
   "jumlah": 5,
   "kondisi": "Baik"
 }</pre></td>
-    <td>{
+  <td><pre>{
   "status": false,
   "message": "kategori tidak ditemukan",
   "data": null
-    }</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>POST</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>POST</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
+  <td><pre>{
   "kode_barang": "BRG013",
   "id_kategori": 1,
   "id_lokasi": 999,
@@ -595,17 +589,17 @@ Tugas:<br>
   "jumlah": 5,
   "kondisi": "Baik"
 }</pre></td>
-    <td>{
+  <td><pre>{
   "status": false,
   "message": "lokasi tidak ditemukan",
   "data": null
-    }</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>POST</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>POST</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php</td>
+  <td><pre>{
   "kode_barang": "BRG09",
   "id_kategori": 1,
   "id_lokasi": 1,
@@ -613,17 +607,17 @@ Tugas:<br>
   "jumlah": 3,
   "kondisi": "Baik"
 }</pre></td>
-    <td>{
+  <td><pre>{
   "status": false,
   "message": "Kode barang sudah digunakan",
   "data": null
-    }</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>PUT</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=9</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>PUT</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=9</td>
+  <td><pre>{
   "kode_barang": "BRG009",
   "id_kategori": 1,
   "id_lokasi": 1,
@@ -631,36 +625,36 @@ Tugas:<br>
   "jumlah": 10,
   "kondisi": "Baik"
 }</pre></td>
-    <td>{
+  <td><pre>{
   "status": true,
   "message": "barang berhasil diperbaharui",
   "data": {
-    "id":9
+    "id": 9
   }
-    }</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>PUT</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=9</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>PUT</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=9</td>
+  <td><pre>{
   "id_kategori": 1,
   "id_lokasi": 1,
   "nama_barang": "speaker Gereja Update",
   "jumlah": 10,
   "kondisi": "Baik"
 }</pre></td>
-    <td>{
+  <td><pre>{
   "status": false,
   "message": "semua field wajib diisi",
   "data": null
-    }</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>PUT</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=99</td>
-    <td><pre>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>PUT</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=99</td>
+  <td><pre>{
   "kode_barang": "BRG009",
   "id_kategori": 1,
   "id_lokasi": 1,
@@ -668,36 +662,37 @@ Tugas:<br>
   "jumlah": 10,
   "kondisi": "Baik"
 }</pre></td>
-    <td>{
+  <td><pre>{
   "status": false,
   "message": "barang tidak ditemukan",
   "data": null
-    }</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>DELETE</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=9</td>
-    <td>-</td>
-    <td>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>DELETE</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=9</td>
+  <td>-</td>
+  <td><pre>{
   "status": true,
   "message": "barang berhasil dihapus",
   "data": {
     "id": 9
   }
-    }</td>
-  </tr>
-  <tr>
-    <td>barang.php</td>
-    <td>DELETE</td>
-    <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=99</td>
-    <td>-</td>
-    <td>{
+}</pre></td>
+</tr>
+<tr>
+  <td>barang.php</td>
+  <td>DELETE</td>
+  <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/barang.php?id=99</td>
+  <td>-</td>
+  <td><pre>{
   "status": false,
   "message": "barang tidak ditemukan",
   "data": null
-    }</td>
-  </tr>
+}</pre></td>
+</tr>
+
 
   <!-- LOKASI -->
   <tr>
