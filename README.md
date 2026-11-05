@@ -65,35 +65,134 @@ Tugas:<br>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php</td>
     <td>-</td>
-    <td>200 OK - Berhasil mengambil semua data kategori barang</td>
+    <td>{
+  "status": true,
+  "message": "berhasil",
+  "data": [
+    {
+      "id_kategori": 6,
+      "nama_kategori": "Peralatan Kebersihan Gereja",
+      "kode_kategori": "KAT006",
+      "deskripsi": "Peralatan untuk menjaga kebersihan gereja",
+      "tanggal_dibuat": "2026-11-02"
+    },
+    {
+      "id_kategori": 5,
+      "nama_kategori": "Tata laksana",
+      "kode_kategori": "KAT005",
+      "deskripsi": "Jangan lupa datang hari minggu",
+      "tanggal_dibuat": "2026-11-01"
+    },
+    {
+      "id_kategori": 4,
+      "nama_kategori": "Perabot Gereja",
+      "kode_kategori": "KAT004",
+      "deskripsi": "Perabot dan perlengkapan gereja",
+      "tanggal_dibuat": "2026-11-01"
+    },
+    {
+      "id_kategori": 3,
+      "nama_kategori": "Peralatan Kebersihan",
+      "kode_kategori": "KAT003",
+      "deskripsi": "Peralatan kebersihan gereja",
+      "tanggal_dibuat": "2026-11-01"
+    },
+    {
+      "id_kategori": 2,
+      "nama_kategori": "Elektronik",
+      "kode_kategori": "KAT002",
+      "deskripsi": "Peralatan elektronik gereja",
+      "tanggal_dibuat": "2026-11-01"
+    },
+    {
+      "id_kategori": 1,
+      "nama_kategori": "Peralatan Elektronik Update",
+      "kode_kategori": "KAT001",
+      "deskripsi": "Kategori elektronik yang telah diperbarui",
+      "tanggal_dibuat": "2026-11-02"
+    }
+  ]
+}</td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=999</td>
     <td>-</td>
-    <td>404 Not Found - Kategori barang tidak ditemukan</td>
+    <td>{
+  "status": false,
+  "message": "Kategori tidak ditemukan",
+  "data": null
+}</td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=1</td>
     <td>-</td>
-    <td>200 OK - Berhasil mengambil kategori berdasarkan ID</td>
+    <td>{
+  "status": true,
+  "message": "berhasil",
+  "data": {
+    "id_kategori": 1,
+    "nama_kategori": "Peralatan Elektronik Update",
+    "kode_kategori": "KAT001",
+    "deskripsi": "Kategori elektronik yang telah diperbarui",
+    "tanggal_dibuat": "2026-11-02"
+  }
+}</td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?search=Elektronik</td>
     <td>-</td>
-    <td>200 OK - Berhasil mencari kategori barang</td>
+    <td>{
+  "status": true,
+  "message": "berhasil",
+  "data": [
+    {
+      "id_kategori": 2,
+      "nama_kategori": "Elektronik",
+      "kode_kategori": "KAT002",
+      "deskripsi": "Peralatan elektronik gereja",
+      "tanggal_dibuat": "2026-11-01"
+    },
+    {
+      "id_kategori": 1,
+      "nama_kategori": "Peralatan Elektronik Update",
+      "kode_kategori": "KAT001",
+      "deskripsi": "Kategori elektronik yang telah diperbarui",
+      "tanggal_dibuat": "2026-11-02"
+    }
+  ]
+}</td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?page=1&limit=2</td>
     <td>-</td>
-    <td>200 OK - Berhasil menampilkan pagination kategori barang</td>
+    <td>{
+  "status": true,
+  "message": "berhasil",
+  "data": [
+    {
+      "id_kategori": 6,
+      "nama_kategori": "Peralatan Kebersihan Gereja",
+      "kode_kategori": "KAT006",
+      "deskripsi": "Peralatan untuk menjaga kebersihan gereja",
+      "tanggal_dibuat": "2026-11-02"
+    },
+    {
+      "id_kategori": 5,
+      "nama_kategori": "Tata laksana",
+      "kode_kategori": "KAT005",
+      "deskripsi": "Jangan lupa datang hari minggu",
+      "tanggal_dibuat": "2026-11-01"
+    }
+  ]
+}</td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
@@ -105,7 +204,14 @@ Tugas:<br>
   "deskripsi": "Peralatan gereja",
   "tanggal_dibuat": "2026-11-02"
 }</pre></td>
-    <td>201 Created - Data kategori berhasil ditambahkan</td>
+    <td> { 
+  "status": true,
+  "message": "kategori berhasil ditambahkan",
+  "data": {
+    "id": 7
+  } 
+}
+</td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
@@ -115,7 +221,12 @@ Tugas:<br>
   "nama_kategori": "Kategori Percobaan",
   "kode_kategori": "KAT010"
 }</pre></td>
-    <td>400 Bad Request - Data kategori tidak lengkap</td>
+    <td> { 
+  "status": false,
+  "message": "semua field wajib diisi",
+  "data": null
+  } 
+</td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
@@ -127,7 +238,11 @@ Tugas:<br>
   "deskripsi": "Pengujian kode kategori duplikat",
   "tanggal_dibuat": "2026-11-02"
 }</pre></td>
-    <td>409 Conflict - Kode kategori sudah digunakan</td>
+    <td>{ 
+  "status": false,
+  "message": "kode kategori sudah digunakan",
+  "data": null
+  } </td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
@@ -139,7 +254,13 @@ Tugas:<br>
   "deskripsi": "Peralatan untuk menjaga kebersihan gereja",
   "tanggal_dibuat": "2026-11-02"
 }</pre></td>
-    <td>200 OK - Data kategori berhasil diperbarui</td>
+    <td> { 
+  "status": true,
+  "message": "kategori berhasil di perbarui",
+  "data": {
+    "id": 6
+  } 
+}</td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
@@ -149,7 +270,11 @@ Tugas:<br>
   "nama_kategori": "Kategori Percobaan",
   "kode_kategori": "KAT999"
 }</pre></td>
-    <td>400 Bad Request - Data kategori tidak lengkap</td>
+    <td>{ 
+  "status": false,
+  "message": "semua field wajib diisi",
+  "data": null
+  } </td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
@@ -161,21 +286,36 @@ Tugas:<br>
   "deskripsi": "Pengujian kategori yang tidak ditemukan",
   "tanggal_dibuat": "2026-11-02"
 }</pre></td>
-    <td>404 Not Found - Kategori barang tidak ditemukan</td>
+    <td>{ 
+  "status": false,
+  "message": "kategori tidak ditemukan",
+  "data": null
+  } </td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
     <td>DELETE</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=7</td>
     <td>-</td>
-    <td>200 OK - Data kategori berhasil dihapus</td>
+    <td> { 
+  "status": true,
+  "message": "kategori berhasil dihapus",
+  "data": {
+    "id": 7
+  } 
+}</td>
   </tr>
   <tr>
     <td>kategori_barang.php</td>
     <td>DELETE</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/kategori_barang.php?id=999</td>
     <td>-</td>
-    <td>404 Not Found - Kategori barang tidak ditemukan</td>
+    <td> { 
+  "status": false,
+  "message": "kategori tidak  ditemukan",
+  "data": null
+  } 
+</td>
   </tr>
 
   <!-- BARANG -->
