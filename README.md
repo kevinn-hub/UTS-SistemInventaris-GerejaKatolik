@@ -4,6 +4,7 @@
 
 ### Kelompok Anomali
 <p>Leonard Kevin Fernando [2511500012]<br>
+Tugas:<br>
 <ul>
     <li>Buat database (scheme.sql)</li>
     <li>Buat ERD</li>
