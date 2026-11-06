@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 02, 2026 at 04:11 AM
+-- Generation Time: Nov 06, 2026 at 07:28 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `gereja_hky`
 --
-CREATE DATABASE IF NOT EXISTS `gereja_hky` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `gereja_hky`;
 
 -- --------------------------------------------------------
 
@@ -49,7 +47,9 @@ INSERT INTO `barang` (`id_barang`, `kode_barang`, `id_kategori`, `id_lokasi`, `n
 (3, 'BRG003', 2, 3, 'Speaker Aktif', 4, 'Baik'),
 (4, 'BRG004', 2, 2, 'Laptop', 2, 'Baik'),
 (5, 'BRG005', 3, 4, 'Sapu Lantai', 10, 'Baik'),
-(6, 'BRG006', 4, 3, 'Kursi Plastik', 100, 'Baik');
+(6, 'BRG006', 4, 3, 'Kursi Plastik', 100, 'Baik'),
+(7, 'BRG007', 5, 6, 'Kursi Altar', 4, 'Kurang Baik'),
+(8, 'BRG008', 1, 1, 'Mikrofon Gereja', 5, 'Baik');
 
 -- --------------------------------------------------------
 
@@ -70,11 +70,12 @@ CREATE TABLE `kategori_barang` (
 --
 
 INSERT INTO `kategori_barang` (`id_kategori`, `nama_kategori`, `kode_kategori`, `deskripsi`, `tanggal_dibuat`) VALUES
-(1, 'Peralatan Liturgi', 'KAT001', 'Peralatan kegiatan liturgi gereja', '2026-11-01'),
+(1, 'Peralatan Elektronik Update', 'KAT001', 'Kategori elektronik yang telah diperbarui', '2026-11-02'),
 (2, 'Elektronik', 'KAT002', 'Peralatan elektronik gereja', '2026-11-01'),
 (3, 'Peralatan Kebersihan', 'KAT003', 'Peralatan kebersihan gereja', '2026-11-01'),
 (4, 'Perabot Gereja', 'KAT004', 'Perabot dan perlengkapan gereja', '2026-11-01'),
-(5, 'Tata laksana', 'KAT005', 'Jangan lupa datang hari minggu', '2026-11-01');
+(5, 'Tata laksana', 'KAT005', 'Jangan lupa datang hari minggu', '2026-11-01'),
+(6, 'Peralatan Kebersihan Gereja', 'KAT006', 'Peralatan untuk menjaga kebersihan gereja', '2026-11-02');
 
 -- --------------------------------------------------------
 
@@ -98,7 +99,9 @@ INSERT INTO `lokasi` (`id_lokasi`, `nama_lokasi`, `kode_lokasi`, `penanggung_jaw
 (1, 'Sakristi', 'LOK001', 'Petugas Sakristi', 50),
 (2, 'Ruang Sekretariat', 'LOK002', 'Sekretaris Gereja', 30),
 (3, 'Aula Gereja', 'LOK003', 'Petugas Aula', 150),
-(4, 'Gudang Gereja', 'LOK004', 'Petugas Gudang', 200);
+(4, 'Gudang Gereja', 'LOK004', 'Petugas Gudang', 200),
+(5, 'Gudang Gereja 2', 'LOK005', 'Petugas Gudang Baru', 2000),
+(6, 'Gudang Serbaguna', 'LOK006', 'Petugas Gudang Baru', 2000);
 
 -- --------------------------------------------------------
 
@@ -168,19 +171,19 @@ ALTER TABLE `transaksi_barang`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `kategori_barang`
 --
 ALTER TABLE `kategori_barang`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `lokasi`
 --
 ALTER TABLE `lokasi`
-  MODIFY `id_lokasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_lokasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `transaksi_barang`

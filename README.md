@@ -1002,11 +1002,17 @@ Tugas:<br>
 <h2>Deskripsi Proyek</h2>
 
 <p>
-  Sistem Inventaris Gereja Katolik merupakan aplikasi berbasis web yang dirancang untuk membantu pengelolaan dan pencatatan inventaris barang gereja.
+  Sistem ini dirancang untuk mengelola data inventaris barang gereja, mulai dari pengelompokan barang berdasarkan kategori, pencatatan lokasi penyimpanan, hingga pencatatan transaksi barang masuk dan keluar. Dengan sistem ini, pengelolaan inventaris menjadi lebih terstruktur dan mudah dipantau.
 </p>
 
 <p>
-  Aplikasi ini digunakan untuk mengelola data kategori barang, lokasi penyimpanan, data inventaris barang, serta transaksi barang masuk dan barang keluar.
+  Hubungan relasi antar tabel
+  1. kategori_barang – barang (1:N)
+  Satu kategori dapat memiliki banyak barang, sedangkan satu barang hanya memiliki satu kategori. Contohnya, kategori Peralatan Liturgi dapat memiliki barang seperti piala misa dan perlengkapan misa lainnya.
+  2. lokasi – barang (1:N)
+  Satu lokasi dapat menyimpan banyak barang, sedangkan satu barang ditempatkan pada satu lokasi. Contohnya, Gudang Gereja dapat menyimpan kursi, sapu, dan perlengkapan lainnya.
+  3. barang – transaksi_barang (1:N)
+  Satu barang dapat memiliki banyak transaksi, sedangkan satu transaksi hanya mencatat satu jenis barang. Contohnya, barang laptop dapat memiliki riwayat transaksi barang masuk maupun barang keluar.
 </p>
 
 <p>
