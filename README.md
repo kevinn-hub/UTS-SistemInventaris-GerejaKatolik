@@ -700,35 +700,126 @@ Tugas:<br>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php</td>
     <td>-</td>
-    <td>200 OK - Berhasil mengambil semua data lokasi</td>
+    <td>{
+  "status": true,
+  "message": "berhasil",
+  "data": [
+    {
+      "id_lokasi": 6,
+      "nama_lokasi": "Gudang Serbaguna",
+      "kode_lokasi": "LOK006",
+      "penanggung_jawab": "Petugas Gudang Baru",
+      "kapasitas": 2000
+    },
+    {
+      "id_lokasi": 5,
+      "nama_lokasi": "Gudang Gereja 2",
+      "kode_lokasi": "LOK005",
+      "penanggung_jawab": "Petugas Gudang Baru",
+      "kapasitas": 2000
+    },
+    {
+      "id_lokasi": 4,
+      "nama_lokasi": "Gudang Gereja",
+      "kode_lokasi": "LOK004",
+      "penanggung_jawab": "Petugas Gudang",
+      "kapasitas": 200
+    },
+    {
+      "id_lokasi": 3,
+      "nama_lokasi": "Aula Gereja",
+      "kode_lokasi": "LOK003",
+      "penanggung_jawab": "Petugas Aula",
+      "kapasitas": 150
+    },
+    {
+      "id_lokasi": 2,
+      "nama_lokasi": "Ruang Sekretariat",
+      "kode_lokasi": "LOK002",
+      "penanggung_jawab": "Sekretaris Gereja",
+      "kapasitas": 30
+    },
+    {
+      "id_lokasi": 1,
+      "nama_lokasi": "Sakristi",
+      "kode_lokasi": "LOK001",
+      "penanggung_jawab": "Petugas Sakristi",
+      "kapasitas": 50
+    }
+  ]
+}
+</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=99</td>
     <td>-</td>
-    <td>404 Not Found - Lokasi tidak ditemukan</td>
+    <td>{
+  "status": false,
+  "message": "Lokasi tidak ditemukan",
+  "data": null
+}
+</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=2</td>
     <td>-</td>
-    <td>200 OK - Berhasil mengambil lokasi berdasarkan ID</td>
+    <td>{
+  "status": false,
+  "message": "Lokasi tidak ditemukan",
+  "data": null
+}
+</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?search=sak</td>
     <td>-</td>
-    <td>200 OK - Berhasil mencari data lokasi</td>
+    <td>{
+  "status": true,
+  "message": "berhasil",
+  "data": [
+    {
+      "id_lokasi": 1,
+      "nama_lokasi": "Sakristi",
+      "kode_lokasi": "LOK001",
+      "penanggung_jawab": "Petugas Sakristi",
+      "kapasitas": 50
+    }
+  ]
+}
+</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?page=1&limit=2</td>
     <td>-</td>
-    <td>200 OK - Berhasil menampilkan pagination lokasi</td>
+    <td>{
+  "status": true,
+  "message": "berhasil",
+  "data": [
+    {
+      "id_lokasi": 6,
+      "nama_lokasi": "Gudang Serbaguna",
+      "kode_lokasi": "LOK006",
+      "penanggung_jawab": "Petugas Gudang Baru",
+      "kapasitas": 2000
+    },
+    {
+      "id_lokasi": 5,
+      "nama_lokasi": "Gudang Gereja 2",
+      "kode_lokasi": "LOK005",
+      "penanggung_jawab": "Petugas Gudang Baru",
+      "kapasitas": 2000
+    }
+  ]
+}
+</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
