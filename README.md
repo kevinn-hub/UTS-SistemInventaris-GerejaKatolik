@@ -9,37 +9,41 @@
     <li>Buat ERD</li>
     <li>Menyusun Readme.md</li>
     <li>Menyusun Dokumentasi/ Screenshot</li>
-    <li>Membuat file mahasiswa.php</li>
+    <li>Membuat config.php</li>
+    <li>Membuat thunderclient json</li>
+    <li>Menambahkan metode GET,POST,PUT,DELETE di kategori_barang.php</li>
+    <li>Menambahkan metode GET,POST,PUT,DELETE di transaksi_barang.php</li>
 </ul>
 <br>
 </p>
 
-<p>Randy [25115000]<br>
+<p>Randy [2511500038]<br>
 Tugas:<br>
 <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Menambahkan metode POST di barang.php</li>
+    <li>Mengedit vidio</li>
+    <li>Menambahkan metode POST di lokasi.php</li>
+    <li>Mengerjakan folder helpers,respone.php</li>
 </ul>
 <br>
 </p>
 
-<p>Melvyn [25115000]<br>
+<p>Melvyn [2511500005]<br>
 Tugas:<br>
 <ul>
-    <li></li>
-    <li></li>
+    <li>Menambahkan metode PUT di barang.php</li>
+    <li>Menambahkan metode PUT di lokasi.php</li>
+    <li>Menambahkan metode DELETE di barang.php</li>
 </ul>
 <br>
 </p>
 
-<p>Peter [25115000]<br>
+<p>Peter [2511500036]<br>
 Tugas:<br>
 <ul>
-    <li></li>
-    <li></li>
+    <li>Menambahkan metode GET di barang.php</li>
+    <li>Menambahkan metode GET di lokasi.php</li>
+    <li>Menambahkan metode DELETE di lokasi.php</li>
 </ul>
 <br>
 </p>
