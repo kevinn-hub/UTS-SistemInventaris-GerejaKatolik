@@ -770,7 +770,7 @@ Tugas:<br>
     <td>{
   "status": false,
   "message": "Lokasi tidak ditemukan",
-  "data": null
+  "data": null 
 }
 </td>
   </tr>
