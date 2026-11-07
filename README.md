@@ -836,7 +836,14 @@ Tugas:<br>
   "penanggung_jawab": "Petugas Liturgi",
   "kapasitas": 200
 }</pre></td>
-    <td>201 Created - Data lokasi berhasil ditambahkan</td>
+    <td>
+    {"status": true,
+  "message": "lokasi berhasil ditambahkan",
+  "data": {
+  "id": 7
+  }
+    }
+    </td>
   </tr>
   <tr>
     <td>lokasi.php</td>
@@ -846,7 +853,11 @@ Tugas:<br>
   "nama_lokasi": "Aula Paroki",
   "kode_lokasi": "LOK007"
 }</pre></td>
-    <td>400 Bad Request - Data lokasi tidak lengkap</td>
+    <td>{
+  "status": false,
+  "message": "semua field wajib diisi",
+  "data": null
+    }</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
@@ -858,7 +869,11 @@ Tugas:<br>
   "penanggung_jawab": "Petugas Liturgi",
   "kapasitas": 200
 }</pre></td>
-    <td>409 Conflict - Kode lokasi sudah digunakan</td>
+    <td>
+    {"status": false,
+  "message": "kode lokasi sudah digunakan",
+  "data": null
+    }</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
@@ -870,7 +885,14 @@ Tugas:<br>
   "penanggung_jawab": "Petugas Liturgi",
   "kapasitas": 200
 }</pre></td>
-    <td>200 OK - Data lokasi berhasil diperbarui</td>
+    <td>
+    {
+  "status": true,
+  "message": "lokasi berhasil diperbaharui",
+  "data": {
+    "id": 7
+  }
+    }</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
@@ -880,7 +902,11 @@ Tugas:<br>
   "nama_lokasi": "Aula 1",
   "kode_lokasi": "LOK007"
 }</pre></td>
-    <td>400 Bad Request - Data lokasi tidak lengkap</td>
+    <td>{
+  "status": false,
+  "message": "semua field wajib diisi",
+  "data": null
+    }</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
@@ -892,21 +918,35 @@ Tugas:<br>
   "penanggung_jawab": "Petugas Liturgi",
   "kapasitas": 200
 }</pre></td>
-    <td>404 Not Found - Lokasi tidak ditemukan</td>
+    <td>{
+  "status": false,
+  "message": "lokasi tidak ditemukan",
+  "data": null
+    }</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
     <td>DELETE</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=7</td>
     <td>-</td>
-    <td>200 OK - Data lokasi berhasil dihapus</td>
+    <td>{
+  "status": true,
+  "message": "lokasi berhasil dihapus",
+  "data": {
+  "id": 7
+  }
+    }</td>
   </tr>
   <tr>
     <td>lokasi.php</td>
     <td>DELETE</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/lokasi.php?id=77</td>
     <td>-</td>
-    <td>404 Not Found - Lokasi tidak ditemukan</td>
+    <td>{
+  "status": false,
+  "message": "lokasi tidak ditemukan",
+  "data": null
+    }</td>
   </tr>
 
   <!-- TRANSAKSI BARANG -->
@@ -915,21 +955,108 @@ Tugas:<br>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php</td>
     <td>-</td>
-    <td>200 OK - Berhasil mengambil semua data transaksi barang</td>
+    <td>{
+  "status": true,
+  "message": "berhasil",
+  "data": [
+    {
+      "id_transaksi": 5,
+      "id_barang": 6,
+      "jenis_transaksi": "Keluar",
+      "jumlah": 10,
+      "tanggal": "2026-10-07",
+      "keterangan": "Pemindahan kursi",
+      "kode_barang": "BRG006",
+      "nama_barang": "Kursi Plastik"
+    },
+    {
+      "id_transaksi": 4,
+      "id_barang": 5,
+      "jenis_transaksi": "Masuk",
+      "jumlah": 5,
+      "tanggal": "2026-10-06",
+      "keterangan": "Penambahan sapu",
+      "kode_barang": "BRG005",
+      "nama_barang": "Sapu Lantai"
+    },
+    {
+      "id_transaksi": 3,
+      "id_barang": 4,
+      "jenis_transaksi": "Keluar",
+      "jumlah": 1,
+      "tanggal": "2026-10-05",
+      "keterangan": "Peminjaman laptop",
+      "kode_barang": "BRG004",
+      "nama_barang": "Laptop"
+    },
+    {
+      "id_transaksi": 2,
+      "id_barang": 3,
+      "jenis_transaksi": "Masuk",
+      "jumlah": 2,
+      "tanggal": "2026-10-02",
+      "keterangan": "Penambahan speaker",
+      "kode_barang": "BRG003",
+      "nama_barang": "Speaker Aktif"
+    },
+    {
+      "id_transaksi": 1,
+      "id_barang": 1,
+      "jenis_transaksi": "Masuk",
+      "jumlah": 2,
+      "tanggal": "2026-10-01",
+      "keterangan": "Penambahan piala misa",
+      "kode_barang": "BRG001",
+      "nama_barang": "Piala Misa"
+    }
+  ]
+}
+</td>
   </tr>
   <tr>
     <td>transaksi_barang.php</td>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php?id=999</td>
     <td>-</td>
-    <td>404 Not Found - Transaksi barang tidak ditemukan</td>
+    <td>
+  {
+  "status": false,
+  "message": "transaksi_barang tidak ditemukan",
+  "data": null
+    }</td>
   </tr>
   <tr>
     <td>transaksi_barang.php</td>
     <td>GET</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php?page=1&limit=2</td>
     <td>-</td>
-    <td>200 OK - Berhasil menampilkan pagination transaksi barang</td>
+    <td>{
+  "status": true,
+  "message": "berhasil",
+  "data": [
+    {
+      "id_transaksi": 5,
+      "id_barang": 6,
+      "jenis_transaksi": "Keluar",
+      "jumlah": 10,
+      "tanggal": "2026-10-07",
+      "keterangan": "Pemindahan kursi",
+      "kode_barang": "BRG006",
+      "nama_barang": "Kursi Plastik"
+    },
+    {
+      "id_transaksi": 4,
+      "id_barang": 5,
+      "jenis_transaksi": "Masuk",
+      "jumlah": 5,
+      "tanggal": "2026-10-06",
+      "keterangan": "Penambahan sapu",
+      "kode_barang": "BRG005",
+      "nama_barang": "Sapu Lantai"
+    }
+  ]
+}
+</td>
   </tr>
   <tr>
     <td>transaksi_barang.php</td>
@@ -942,7 +1069,11 @@ Tugas:<br>
   "tanggal": "2026-10-08",
   "keterangan": "Pemindahan Meja"
 }</pre></td>
-    <td>201 Created - Data transaksi berhasil ditambahkan</td>
+    <td>{
+  "status": true,
+  "message": "transaksi tidak berhasil ditambahkan",
+  "data": null
+    }</td>
   </tr>
   <tr>
     <td>transaksi_barang.php</td>
@@ -953,7 +1084,11 @@ Tugas:<br>
   "jenis_transaksi": "Masuk",
   "jumlah": 10
 }</pre></td>
-    <td>400 Bad Request - Semua field wajib diisi</td>
+    <td>{
+    "status": false,
+  "message": "semua field wajib diisi",
+  "data": null
+    }</td>
   </tr>
   <tr>
     <td>transaksi_barang.php</td>
@@ -966,7 +1101,11 @@ Tugas:<br>
   "tanggal": "2026-10-08",
   "keterangan": "Pengujian FK 404"
 }</pre></td>
-    <td>404 Not Found - Barang tidak ditemukan</td>
+    <td>{
+    "status": false,
+  "message": "barang tidak ditemukan",
+  "data": null
+    }</td>
   </tr>
   <tr>
     <td>transaksi_barang.php</td>
@@ -979,7 +1118,13 @@ Tugas:<br>
   "tanggal": "2026-10-08",
   "keterangan": "Pemindahan Meja"
 }</pre></td>
-    <td>200 OK - Data transaksi berhasil diperbarui</td>
+    <td>{
+    "status": true,
+  "message": "transaksi berhasil diperbarui",
+  "data": {
+  "id": 6
+  }
+    }</td>
   </tr>
   <tr>
     <td>transaksi_barang.php</td>
@@ -992,14 +1137,24 @@ Tugas:<br>
   "tanggal": "2026-10-08",
   "keterangan": "Pemindahan Meja"
 }</pre></td>
-    <td>404 Not Found - Barang tidak ditemukan</td>
+    <td>{
+    "status": false,
+  "message": "barang tidak ditemukan",
+  "data": null
+    }</td>
   </tr>
   <tr>
     <td>transaksi_barang.php</td>
     <td>DELETE</td>
     <td>http://localhost/UTS-SistemInventaris-GerejaKatolik/api/transaksi_barang.php?id=6</td>
     <td>-</td>
-    <td>200 OK - Data transaksi berhasil dihapus</td>
+    <td>{
+    "status": true,
+  "message": "semua field wajib diisi",
+  "data": {
+  "id": 6
+  }
+    }</td>
   </tr>
 </table>
 
