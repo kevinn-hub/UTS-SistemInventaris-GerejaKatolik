@@ -11,6 +11,7 @@ Tugas:<br>
     <li>Menyusun Readme.md</li>
     <li>Menyusun Dokumentasi/ Screenshot</li>
     <li>Membuat config.php</li>
+    <li>Membuat daftar endpoint</li>
     <li>Membuat thunderclient json</li>
     <li>Menambahkan metode GET,POST,PUT,DELETE di kategori_barang.php</li>
     <li>Menambahkan metode GET,POST,PUT,DELETE di transaksi_barang.php</li>
